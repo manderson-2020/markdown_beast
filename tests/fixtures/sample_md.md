@@ -1,6 +1,6 @@
 ### GET example
 
-**GET** http://dummy.restapiexample.com/api/v1/employees
+**GET** https://jsonplaceholder.typicode.com/posts/1
 
 ### POST
-**POST** http://dummy.restapiexample.com/api/v1/create
+**POST** https://jsonplaceholder.typicode.com/posts

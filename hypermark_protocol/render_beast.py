@@ -24,10 +24,16 @@ class RenderBeast(Renderer):
     # only type of paragraph right now is an api call
     # its children look like this:
     # [<marko.inline.StrongEmphasis object at 0x10ad84a30>, <marko.inline.RawText object at 0x10ad84f70>]
-    verb = element.children[0].children[0]
+    verb = element.children[0].children[0].children
     url = element.children[1].children.strip()
-    print(verb.children == "POST")
-    response = requests.get(url)
+
+    if (verb == "POST"):
+      print("doing post")
+      response = requests.post(url)
+    else:  # assuming get if not any of the others
+      print("doing get")
+      response = requests.get(url)
+
     print(url)
     print(response)
 
